@@ -26,15 +26,18 @@ class CardGame
   dif highest_card(card1 card2)
   if card1.value > card2.value
     # Error: 'card' doesn't exist. Should be card1
+    # Error: Card class doesn't have a 'name' variable
     return card.name
   else
     # Error: no 'return' (although Ruby might still pass that)
-    # Error: Should be card2.name based on the return above
+    # Error: Inconsistent return values (above passes back a variable, this passes an object)
     card2
   end
 end
+# Error: Extra end, finishes the class early
 end
 
+# Possible Error: Based on the above, should really be an instance method, not a class method
 def self.cards_total(cards)
   # Error: total is not defined properly (should be total = 0, or, at least, total = Int.new)
   total
